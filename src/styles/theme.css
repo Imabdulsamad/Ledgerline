@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   THEME TOKENS — all colors flow from CSS variables so the
+   Dark/Light toggle is a single data-attribute swap on <html>.
+   ============================================================ */
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #0b1016;
+  --surface: #121924;
+  --surface-2: #1a2331;
+  --border: #23303f;
+  --text: #e9eef4;
+  --muted: #96a5b5;
+  --income: #3ddc97;
+  --expense: #ff8b7b;
+  --accent: #6fb7ff;
+  --chip: rgba(111, 183, 255, 0.12);
+}
+
+[data-theme="light"] {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #eef2f6;
+  --border: #dde4eb;
+  --text: #16212d;
+  --muted: #5d6b7a;
+  --income: #0e9f6e;
+  --expense: #e05252;
+  --accent: #2472c8;
+  --chip: rgba(36, 114, 200, 0.1);
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--font-body);
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.fade-in { animation: fadeIn 0.25s ease; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes scanline {
+  0% { top: 0; }
+  100% { top: calc(100% - 2px); }
+}
+.scan-bar { animation: scanline 1.1s linear infinite alternate; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .scan-bar { animation: none; }
+}
