@@ -22,7 +22,7 @@ export default function LogoMark({ size = 36 }) {
 
   return (
     <img
-      src="/logo-mark.png"
+      src="/favicon.svg"
       alt="Ledgerline logo"
       width={size}
       height={size}
