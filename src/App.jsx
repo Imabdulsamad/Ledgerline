@@ -2,7 +2,10 @@ import React, { useMemo, useState } from "react";
 import { Plus, Sun, Moon, Wallet, ArrowUpRight, ArrowDownRight, PiggyBank } from "lucide-react";
 import { useTheme } from "./hooks/useTheme";
 import { useTransactions } from "./hooks/useTransactions";
+<<<<<<< HEAD
 import LogoMark from "./components/ui/LogoMark";
+=======
+>>>>>>> bbef9d6a66ea2bde6012beeadb974c6a094fceea
 import MetricCard from "./components/ui/MetricCard";
 import MonthSelect from "./components/ui/MonthSelect";
 import SpendingCharts from "./components/charts/SpendingCharts";
@@ -51,7 +54,16 @@ export default function App() {
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
         <header className="mb-6 flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-2.5">
+<<<<<<< HEAD
             <LogoMark size={36} />
+=======
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-xl"
+              style={{ background: "var(--chip)", color: "var(--accent)" }}
+            >
+              <Wallet size={18} />
+            </span>
+>>>>>>> bbef9d6a66ea2bde6012beeadb974c6a094fceea
             <div>
               <h1 className="text-lg font-bold leading-tight" style={{ color: "var(--text)", fontFamily: "var(--font-display)" }}>
                 Ledgerline
